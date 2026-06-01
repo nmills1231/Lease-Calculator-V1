@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <!-- Rent Structure Section -->
+      <!-- Rent Structure -->
       <div class="mt-8 pt-6 border-t border-zinc-700">
         <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Rent Structure</label>
         <select id="rent-structure" onchange="setRentStructure(this.value)" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 text-lg focus:outline-none focus:border-emerald-500">
@@ -192,12 +192,11 @@
       container.innerHTML = html;
     }
 
-    function setRentType(val) { /* optional */ }
     function setRentStructure(val) {
       currentRentStructure = parseInt(val);
       renderStructureInputs();
     }
-    function setCommissionType(val) { /* optional */ }
+
     function toggleFreeRent() {
       const checked = document.getElementById('include-free-rent').checked;
       document.getElementById('free-rent-section').classList.toggle('hidden', !checked);
@@ -250,7 +249,7 @@
       const yourGross = totalCommission * yourSide;
       const yourNet = yourGross * agentSplit;
 
-      // Display results
+      // Show results
       document.getElementById('empty-state').classList.add('hidden');
       document.getElementById('results-panel').classList.remove('hidden');
 
@@ -274,17 +273,17 @@
       if (!lastCalculation) return alert("Calculate a deal first!");
       const name = prompt("Deal name?", "New Deal");
       if (!name) return;
-      alert(`Deal "${name}" saved! (Saved deals will appear here in next update)`);
+      alert(`Deal "${name}" saved!`);
     }
 
     function exportPDF() {
       if (!lastCalculation) return alert("Calculate first!");
-      alert("PDF export coming in the next update.");
+      alert("PDF export coming in next update.");
     }
 
     window.onload = function() {
       renderStructureInputs();
-      console.log('%c✅ LeaseCalc is fully working!', 'color:#10b981; font-size:14px');
+      console.log('%c✅ LeaseCalc fully working!', 'color:#10b981');
     };
   </script>
 </body>
