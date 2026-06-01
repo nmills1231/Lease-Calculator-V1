@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <!-- Deal Details -->
+    <!-- Deal Details - Light theme -->
     <div class="bg-white border border-slate-200 rounded-3xl p-8 mb-8 shadow-sm">
       <h2 class="text-xl font-semibold mb-6 flex items-center gap-x-2"><i class="fa-solid fa-building text-blue-600"></i> Deal Details</h2>
 
@@ -160,7 +160,7 @@
   </div>
 
   <script>
-    // Full working script (same as before)
+    // Full working script
     let currentRentType = 1;
     let currentRentStructure = 1;
     let commissionType = 0;
@@ -199,7 +199,6 @@
     }
 
     function calculate() {
-      // Full calculation (same as before)
       const sqft = parseFloat(document.getElementById('sqft').value) || 0;
       const rentInput = parseFloat(document.getElementById('rent-amount').value) || 0;
       const years = parseFloat(document.getElementById('years').value) || 0;
@@ -279,7 +278,7 @@
 
     window.onload = function() {
       renderStructureInputs();
-      console.log('%c✅ Professional Light Grey + Blue theme applied!', 'color:#3b82f6');
+      console.log('%c✅ Light Professional Theme Applied!', 'color:#3b82f6');
     };
   </script>
 </body>
